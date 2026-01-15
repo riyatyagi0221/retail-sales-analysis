@@ -2,7 +2,7 @@
 
  Project Overview
 This project demonstrates an end-to-end **Excel-based data analytics workflow** using a retail sales dataset.  
-It focuses on **data cleaning, analysis, automation, and dashboarding** aligned with Data Analyst job requirements.
+It focuses on **data cleaning, analysis, automation, and dashboarding**.
 
 ---
 
@@ -49,21 +49,6 @@ It focuses on **data cleaning, analysis, automation, and dashboarding** aligned 
 ## Dashboard Preview
 *(See Dashboard folder for screenshots)*
 
----
-
-##  How to Run the Project
-1. Download the repository
-2. Open `Retail_Sales_Analysis.xlsm`
-3. Enable macros
-4. Click **Refresh Data** to update dashboard
-
----
-
-##  Key Learnings
-- Advanced Excel analytics
-- Business-focused dashboard design
-- Automation using VBA
-- End-to-end reporting workflow
 
 ---
 
