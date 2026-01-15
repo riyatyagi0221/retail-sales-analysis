@@ -1,0 +1,48 @@
+Sub Refresh_All_Data()
+
+    ThisWorkbook.RefreshAll
+    MsgBox "All data and pivots refreshed successfully!", vbInformation
+
+End Sub
+
+Sub Clear_All_Filters()
+
+    Dim ws As Worksheet
+
+    For Each ws In ThisWorkbook.Worksheets
+        If ws.AutoFilterMode Then
+            ws.AutoFilter.ShowAllData
+        End If
+    Next ws
+
+    MsgBox "All filters cleared!", vbInformation
+
+End Sub
+
+Sub Reset_Dashboard()
+
+    Dim sc As SlicerCache
+
+    For Each sc In ThisWorkbook.SlicerCaches
+        sc.ClearManualFilter
+    Next sc
+
+    MsgBox "Dashboard reset successfully!", vbInformation
+
+End Sub
+
+Sub Export_Dashboard_PDF()
+
+    Dim ws As Worksheet
+    Set ws = Sheets("Dashboard")
+
+    ws.ExportAsFixedFormat _
+        Type:=xlTypePDF, _
+        Filename:=ThisWorkbook.Path & "\Retail_Dashboard.pdf", _
+        Quality:=xlQualityStandard, _
+        IncludeDocProperties:=True, _
+        IgnorePrintAreas:=False
+
+    MsgBox "Dashboard exported as PDF!", vbInformation
+
+End Sub
